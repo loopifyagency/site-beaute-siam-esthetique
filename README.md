@@ -39,4 +39,8 @@ Puis ouvrir <http://localhost:8000>.
 
 ## Déploiement
 
-N'importe quel hébergeur statique convient (GitHub Pages, Netlify, Vercel, OVH). La racine du dépôt contient aussi des fichiers de travail (`PRODUCT.md`, `DESIGN.md`, `.claude/`, `.agents/`, `.impeccable/`) ; si besoin, publiez seulement `index.html` et le dossier `assets/`.
+Le site est publié sur GitHub Pages par le workflow `.github/workflows/pages.yml` : à chaque push sur `main`, seuls `index.html` et `assets/` sont envoyés (les fichiers de travail comme `PRODUCT.md`, `DESIGN.md`, `.claude/`, `.agents/` ne sont pas publiés).
+
+Activation (une seule fois) : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
+
+Tous les chemins sont relatifs : le site fonctionne aussi bien sous `https://<compte>.github.io/site-beaute-siam-esthetique/` que sur un domaine personnalisé (à régler dans Settings → Pages).
